@@ -1,6 +1,9 @@
 name: Issues Workflow
 
-on: [push, pull_request]
+on:
+  push:
+  pull_request:
+    types: [opened, edited, reopened, assigned, unassigned, unlocked]
 
 jobs:
   run-github-actions:
