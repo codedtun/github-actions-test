@@ -1,8 +1,7 @@
 name: Issues Workflow
 
 on:
-  push:
-  pull_request:
+  issues:
     types: [opened, edited, reopened, assigned, unassigned, unlocked]
 
 jobs:
