@@ -9,15 +9,15 @@ jobs:
         node_version: [8, 9, 10]
         include:
           - os: ubuntu-latest
-            node-version: 9
+            node_version: 9
             is_ubuntu_8: "true"
         exclude:
           - os: ubuntu-latest
             node_version: 9
           - os: macos-latest
-            node-version: 8
+            node_version: 8
           - os: windows-latest
-            node-version: 10
+            node_version: 10
       max-parallel: 3
       fail-fast: false
     runs-on: ${{ matrix.os }}
@@ -28,7 +28,7 @@ jobs:
         run: node -v
       - uses: actions/setup-node@v1
         with:
-          node-version: ${{ matrix.node_version }}
+          node_version: ${{ matrix.node_version }}
       - name: Log node version
         run: |
           node -v
